@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Ruchita Salvi/Desktop/okhttp-3.3.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Ruchita Salvi/Desktop/okio-1.8.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Ruchita Salvi/android-sdks/platforms/android-19/android.jar" sourcepath="C:/Users/Ruchita Salvi/android-sdks/sources/android-19">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/C:/Users/Ruchita Salvi/android-sdks/docs/reference"/>
+		</attributes>
+		<accessrules>
+			<accessrule kind="nonaccessible" pattern="com/android/internal/**"/>
+		</accessrules>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Ruchita Salvi/Desktop/android-query-full.0.23.16.jar"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>
