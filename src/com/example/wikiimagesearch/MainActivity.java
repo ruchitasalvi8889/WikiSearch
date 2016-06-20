@@ -21,6 +21,8 @@ import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.GridView;
 import android.widget.SearchView;
 import android.widget.SearchView.OnQueryTextListener;
@@ -101,6 +103,8 @@ public class MainActivity extends ActionBarActivity implements
 			pd = new ProgressDialog(MainActivity.this);
 			pd.setCancelable(false);
 			pd.setMessage("Searching...");
+			grid.setVisibility(View.GONE);
+			noresult.setVisibility(View.GONE);
 			pd.getWindow().setGravity(Gravity.CENTER);
 			pd.show();
 		}
@@ -184,9 +188,6 @@ public class MainActivity extends ActionBarActivity implements
 
 				pd.dismiss();
 			} else {
-
-				Toast.makeText(MainActivity.this, "Successfully parsed",
-						Toast.LENGTH_LONG).show();
 				pd.dismiss();
 				ArrayList<ThumbNail> toSetinAdapter = new ArrayList<ThumbNail>();
 				for (int i = 0; i < Global.productList.size(); i++) {
@@ -206,6 +207,10 @@ public class MainActivity extends ActionBarActivity implements
 							MainActivity.this, toSetinAdapter);
 
 					grid.setAdapter(adapter);
+					
+					 Animation anim = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.fly_in_from_center);
+					 grid.setAnimation(anim);
+                     anim.start();
 				} else {
 					grid.setVisibility(View.GONE);
 					noresult.setVisibility(View.VISIBLE);
